@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #1e40af;
+  --color-accent: #f59e0b;
+  --color-dark: #111827;
+  --color-light: #f3f4f6;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.resume-preview-container {
+  width: 210mm;
+  min-height: 297mm;
+  background-color: white;
+  padding: 40px 50px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.preview-pane {
+  flex: 1;
+  background-color: #525659;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
